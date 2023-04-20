@@ -1,7 +1,9 @@
 <div>
   <h1 class="font-bold text-4xl">Posts#index</h1>
-  <p>Find me in app/views/posts/index.html.erb</p>
   <h1 class="text-3xl font-bold underline">
-    Hello world!
+      Hello world!
   </h1>
-</div>
+  </div>
+  <%= button_to :destroy_user_session, method: :delete, data: { turbo:false } do %>
+    <p>Log out</p>
+  <% end %>
