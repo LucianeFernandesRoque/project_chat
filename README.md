@@ -1,11 +1,11 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Projeto para criado para se atualizar com as novas tecnologias.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version 3.1.3
+* Rails  7.0.4
 
 * System dependencies
 
