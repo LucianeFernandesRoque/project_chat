@@ -28,7 +28,7 @@ class RoomsController < ApplicationController
   end
 
   def destroy
-    return redirect_to @room if room.destroy
+    return redirect_to @room if @room.destroy
 
     render :index
   end
