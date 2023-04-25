@@ -1,8 +1,6 @@
 <%= turbo_frame_tag 'rooms_controller' do %>
-
   <main class="flex w-full h-screen bg-[#e2e8f0]">
     <%= render 'shared/side_bar' %>
-
     <section class="flex flex-col items-center justify-center gao-5 h-screen">
       <%= link_to 'New Room', new_room_path, class:"rounded-lg py-3 px-5 bg-purple-600 text-white block font-medium" %>
     </section>

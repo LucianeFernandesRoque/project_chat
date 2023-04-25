@@ -1,10 +1,4 @@
-<h1>Edit Room</h1>
-
-<%= render "form", room: @room %>
-
-<br>
-
-<div>
-  <%= link_to "Edit room", @room %>
-  <%= link_to "Back room", rooms_path %>
-</div>
+<%= turbo_frame_tag "room_#{@room.id}" do %>
+  <h3 class="text-gray font-semibold text-sm text-center">Edit Room</h3>
+  <%= render "form", room: @room %>
+<% end %>
