@@ -2,6 +2,7 @@ class RoomsController < ApplicationController
   before_action :authenticate_user!
   before_action :fetch_room, only: %i[ show edit update destroy ]
 
+
   def index
     @rooms = Room.all
   end
@@ -27,9 +28,13 @@ class RoomsController < ApplicationController
   end
 
   def update
-    return redirect_to @room if @room.update(room_params)
-
-    render :edit
+    respond_to do |format|
+      if @room.update(room_params)
+        format.turbo_stream { render turbo_stream: turbo_stream.replace("room_#{@room.id}", partial: 'shared/room', locals: {room: @room }) }
+      else
+        format.html ( render :edit )
+      end
+    end
   end
 
   def destroy
