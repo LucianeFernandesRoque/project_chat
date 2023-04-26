@@ -32,7 +32,7 @@ class RoomsController < ApplicationController
       if @room.update(room_params)
         format.turbo_stream { render turbo_stream: turbo_stream.replace("room_#{@room.id}", partial: 'shared/room', locals: {room: @room }) }
       else
-        format.html ( render :edit )
+        format.html { render :edit }
       end
     end
   end
