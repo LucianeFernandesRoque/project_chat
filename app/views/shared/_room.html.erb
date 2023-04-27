@@ -1,6 +1,6 @@
 <%= turbo_frame_tag "room_#{room.id}" do %>
   <div class="text-gray font-semibold">
-    <%= link_to room_path(room), class: 'font-semibold text-grey text-sm', data: {turbo_frame: 'rooms_controller'} do  %> 
+    <%= link_to room_path(room), class: 'font-semibold text-purple text-sm', data: {turbo_frame: 'rooms_controller'} do  %>
       <%= room.name %>
     <% end %>
 

@@ -1,15 +1,9 @@
-<div class="mx-auto md:w-2/3 w-full flex">
-  <div class="mx-auto">
-  <% if notice.present? %>
-    <p class="py-2 px-3 bg-grey-50 mb-5 text-purple-500"><%= notice %></p>
-  <% end %>
+<%= turbo_frame_tag 'rooms_controller' do %>
+  <main class="w-5/6 flex flex-col gap-5 h-screen px-5">
+    <%= render 'shared/side_bar' %>
 
-  <%= render @room %>
-
-    <%= link_to "Edit this post", edit_room_path(@room), class: %> |
-    <div class="inline-block ml-2">
-      <%= button_to "Destroy room", @room, method: :delete %>
-    </div>
-    <%= link_to "Back to rooms", rooms_path %>
-  </div>
-</div>
+    <section class="flex flex-col items-center justify-center gao-5 h-screen">
+      <%= render 'room', room: @room %>
+    </section>
+  </main>
+<% end %>
