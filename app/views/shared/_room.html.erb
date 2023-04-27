@@ -3,7 +3,6 @@
     <%= link_to room_path(room), class: 'font-semibold text-purple text-sm', data: {turbo_frame: 'rooms_controller'} do  %>
       <%= room.name %>
     <% end %>
-
     <%= link_to 'Edit Room', edit_room_path(room) %>
   </div>
 <% end %>

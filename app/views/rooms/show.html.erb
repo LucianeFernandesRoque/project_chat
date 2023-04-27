@@ -1,9 +1,10 @@
 <%= turbo_frame_tag 'rooms_controller' do %>
-  <main class="w-5/6 flex flex-col gap-5 h-screen px-5">
+  <main class="flex w-full h-screen bg-grey">
     <%= render 'shared/side_bar' %>
 
-    <section class="flex flex-col items-center justify-center gao-5 h-screen">
+    <section class="w-5/6 flex flex-col gap-5 h-screen px-5">
       <%= render 'room', room: @room %>
     </section>
   </main>
+</div>
 <% end %>
