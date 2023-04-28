@@ -1,5 +1,5 @@
 <%= turbo_frame_tag "room_#{room.id}" do %>
-  <div class="text-gray font-semibold">
+  <div class="text-gray font-semibold" bgw-60 flex flex-col items-center justify-between border border-[#f5f3ff]>
     <%= link_to room_path(room), class: 'font-semibold text-purple text-sm', data: {turbo_frame: 'rooms_controller'} do  %>
       <%= room.name %>
     <% end %>
