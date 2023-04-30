@@ -3,4 +3,20 @@
     <h3 class="font-bold text-3x1 text-gray"> <%= room.name  %> - Room </h3>
     <span class="text-gray font-semibold">Users in this room: </span>
   </div>
+
+  <section class="flex gap-5">
+    <div class="py-2 px-10 flex flex-col gap-1 items-center border-purple-600 border rounded-lg my-2 shadow-lg w-96">
+      <h3 class="text-gray font-semibold text-center">Users in this room</h3>
+
+      <% User.all.each do |user| %>
+        <% next unless room.users.include?(user) %>
+        <div class="rounded underline text-gray my-1 font-semibold text-sm">
+        <%= user.email %>
+        </div>
+      <% end %>
+    </div>
+
+    <div>
+    </div>
+  </section>
 </section>
