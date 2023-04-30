@@ -6,8 +6,8 @@
 
 <span class="text-[#701a75] text-center font-semibold mt-5"><%= current_user.email %></span>
   <div class="flex flex-col px-5 gap-2 w-full" id="rooms">
-    <% Room.all.each do |room| %>
-      <%= render 'shared/room', { room: room } %>
+    <% current_user.rooms.all.each do |room| %>
+      <%= render 'shared/room', room: room %>
     <% end  %>
   </div>
 </section>
