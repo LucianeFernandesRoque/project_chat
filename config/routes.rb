@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  post 'add/user', to: 'rooms#add_user'
   resources :rooms
   devise_for :users
   root 'rooms#index'
