@@ -45,10 +45,10 @@ class RoomsController < ApplicationController
   end
 
   def add_user
-    UserRoom.create(room: params[:room_id], user: params[:user_id])
+    UserRoom.create(room_id: params[:room_id], user_id: params[:user_id])
 
     respond_to do |format|
-        format.turbo_stream { render turbo_stream: turbo_stream.replace("room_#{params[:room_id]}", partial: 'rooms/room', locals: {room: Room.find(parans[room_id]) }) }
+        format.turbo_stream { render turbo_stream: turbo_stream.replace("room_show_#{params[:room_id]}", partial: 'rooms/room', locals: {room: Room.find(parans[:room_id]) }) }
     end
   end
 
@@ -59,6 +59,6 @@ class RoomsController < ApplicationController
   end
 
   def fetch_room
-    @room = Room.find(params[:id] || params[:room_id])
+    @room = Room.find(params[:id])
   end
 end
