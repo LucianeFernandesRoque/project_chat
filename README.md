@@ -4,8 +4,9 @@
 ## 🚀 Getting Started
 
 Projeto baseado nas novas tecnologias do rails 7, como o intuito de criar um chat com a tecnologia Hotwired.
-- Criar  login
-- Criar salas simultaneamente, sem precisar atualizar a pagina
+- Criado  login
+- Criado salas simultaneamente, sem precisar atualizar a pagina
+- WebScoket criado, para efetuar a comunição simultaneamente de permissões e visualizações de salas do cha app.
 
 ### 📋 Pré-requisitos
 
