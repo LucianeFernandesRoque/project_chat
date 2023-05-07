@@ -3,18 +3,22 @@
 
 ## 🚀 Getting Started
 
-Projeto baseado em se atualizar com as novas tecnologias como hotwire e atualização do rails.
+Projeto baseado nas novas tecnologias do rails 7, como o intuito de criar um chat com a tecnologia Hotwired.
 - Criar  login
+- Criar salas simultaneamente, sem precisar atualizar a pagina
 
 ### 📋 Pré-requisitos
 
-```
-
-```
+* [rvm] (https://www.ruby-lang.org/en/documentation/installation/#rvm)
+* [rails] (https://www.ruby-lang.org/en/documentation/installation/)
 
 ### 🔧 Instalação
 
-
+- Clone o o projeto Chat App, através do git hub.
+- Após clonar o repositorio, digite: `cd chat-app` para entrar no repositorio
+- Execute o comando `bundle install`, para instalar as dependendcias do projeto.
+- Digite `rails server`, para rodar a aplicação
+- Acesse a pagina `http://localhost:3000/`
 
 
 
@@ -29,11 +33,11 @@ em desenvolvimento
 
 ## 🛠️ Construído com
 * [Ruby](https://ruby-doc.org/) - Linguagem usada Ruby 3.1.3
-
-* [Rail]()
+* [Rail](https://guides.rubyonrails.org/) - gem "rails", "~> 7.0.4"
 * [HotWire](https://hotwired.dev/) - HotWire
+* [Postgres](https://www.postgresql.org/) -PostGres 1.0
+* [Tailwind](https://tailwindcss.com/docs/guides/ruby-on-rails) - tailwindcss-rails", "~> 2.0
 
-* [Postgres]
 
 
 ## ✒️ Autora: Luciane Fernandes Roque
