@@ -4,9 +4,10 @@
     <span class="font-semibold text-sm"> <%= message.message %></span>
   </div>
   <div class="flex gap-3">
-    <%= button_to '#'m class: 'text-sm font-medium bg-purple-800 text-grey py-1 px-3 rounded', params: {message: message}, method: :get do%>
+    <%= button_to '#'m class: 'text-sm font-medium bg-purple-800 text-grey py-1 px-3 rounded', params: {message: message}, method: :get do %>
       Edit
     <% end %>
+
     <%= button_to '#'m class: 'text-sm font-medium bg-red-800 text-grey py-1 px-3 rounded', params: {message: message}, method: :delete do %>
       Delete
     <% end %>

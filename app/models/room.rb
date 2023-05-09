@@ -9,6 +9,6 @@ class Room < ApplicationRecord
   private
 
   def update_room_details
-    broadcast_replace_to('room_details_channel', partial: 'shared/room', locals: {room: self }, target: "room_#{self.id}")
+    broadcast_replace_to('room_details_channel', partial: 'shared/room', locals: { room: self }, target: "room_#{self.id}")
   end
 end
