@@ -1,5 +1,6 @@
 class MessagesController < ApplicationController
-  before_action :fetch_room, only: %i[create]
+  before_action :fetch_room, only: %i[create edit]
+  before_action :fetch_message, only: %i[edit]
 
   def create
     @message = @room.messages.new(message_params)
@@ -13,10 +14,16 @@ class MessagesController < ApplicationController
     # debugger
   end
 
+  def edit; end
+
   private
 
   def fetch_room
     @room = Room.find(params[:room_id])
+  end
+
+  def fetch_message
+    @message = Message.find(params[:id])
   end
 
   def message_params
