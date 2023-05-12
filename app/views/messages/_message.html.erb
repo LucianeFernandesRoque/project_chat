@@ -8,7 +8,7 @@
       Edit
     <% end %>
 
-    <%= button_to '#',  class: 'text-sm font-medium bg-red-800 text-grey py-1 px-3 rounded', params: {message: message}, method: :delete do %>
+    <%= button_to room_message_path(message.room, message),  class: 'text-sm font-medium bg-red-800 text-grey py-1 px-3 rounded', method: :delete do %>
       Delete
     <% end %>
   </div>
