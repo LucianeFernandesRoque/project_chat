@@ -1,4 +1,5 @@
-<%= form_with(model: room, class: "flex flex-col my-3 w-full") do |form| %>
+<div data-controller="form">
+<%= form_with(model: room, class: "flex flex-col my-3 w-full", data: { controller: 'form', action: 'submit->form#resetComponent' }) do |form| %>
   <% if room.errors.any? %>
     <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
       <h2><%= pluralize(room.errors.count, "error") %> prohibited this room from being saved:</h2>
@@ -20,4 +21,6 @@
     <%= link_to 'Cancel', :back, class: 'cursor-pointer p-2 text-sm text-white font-semibold bg-[#db2777] rounded' %>
   </div>
 <% end %>
+</div>
+
 
