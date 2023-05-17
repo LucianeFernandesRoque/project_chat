@@ -8,7 +8,7 @@
 
       <div class="flex flex-col w-full items-center">
         <div class="flex flex-col w-5/6 items-center justify-center">
-          <div class="h-72 w-5/6 bg-white rounded p-2 my-5 overflow-y-auto" id="room_messages_div">
+          <div class="h-72 w-5/6 bg-white rounded p-2 my-5 overflow-y-auto border-purple" id="room_messages_div">
             <% @room.messages.order(:created_at).each do |message| %>
               <%= render 'messages/message', { message: message } %>
             <% end %>
